@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tete JavaScript</title>
+<meta charset="utf-8"/>
+<script>
+var quebrada = false;
+function muda_lampada(tipo) {
+
+if (!quebrada) {
+document.getElementById("luz").src="_imagens/" + tipo + ".jpg";
+if (tipo=='lampada-quebrada') {
+quebrada=true;
+}
+}	
+}
+</script>
+</script>
+</head>
+<body>
+<h1>Muda a Lampada</h1>
+<img src="_imagens/lampada-apagada.jpg" id="luz" onmousemove="muda_lampada('lampada-acesa')" onmouseout="muda_lampada('lampada-apagada')" onclick="muda_lampada('lampada-quebrada')"/>
+</body>
+
+</html>
